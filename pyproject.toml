@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nhejscan"
+version = "1.0.0"
+description = "Pairwise-genome INDEL end-joining signatures (Mauve + Messer trace extension + outgroup polarisation)"
+requires-python = ">=3.9"
+dependencies = ["biopython>=1.80", "pandas>=1.5", "numpy", "scipy", "matplotlib"]
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[project.scripts]
+nhejscan = "nhejscan.cli:main"
+
+[tool.setuptools]
+packages = ["nhejscan"]
+
+[tool.setuptools.package-data]
+nhejscan = ["cpp/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

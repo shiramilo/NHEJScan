@@ -1,0 +1,15 @@
+name: nhejscan
+channels: [conda-forge, bioconda, defaults]
+dependencies:
+  - python>=3.9
+  - biopython>=1.80
+  - pandas
+  - numpy
+  - scipy
+  - matplotlib
+  - mafft
+  - blast
+  - mauve        # provides progressiveMauve
+  - cxx-compiler # builds the bundled trace_ext
+  - pytest
+  - pip
